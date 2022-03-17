@@ -1,4 +1,4 @@
-This git present the weird things when I play with React Native.
+This git presents the weird things when I play with React Native.
 
 In details,
 
@@ -42,7 +42,7 @@ const RenderModal = ({visible}: ModalProps) => {
     );
   };
 
-  //** If I compose TextInput like these codes bellow, Everythings work fine  */
+  //** If I compose TextInput like these codes below, Everythings work fine  */
 
   return (
     <Modal visible={visible} transparent={true} animationType="slide">

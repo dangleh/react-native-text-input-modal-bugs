@@ -2,7 +2,7 @@ This git presents the weird things when I play with React Native.
 
 In details,
 
-When I compose TextInput inside <Modal> component from 'react-native'. Then State changed throught onChangeText, keyboard not dismiss. It works fine
+When I compose TextInput inside Modal component from 'react-native'. Then State changed throught onChangeText, keyboard not dismiss. It works fine
 
 ```
 const RenderModal = ({visible}: ModalProps) => {
@@ -25,7 +25,7 @@ const RenderModal = ({visible}: ModalProps) => {
 };
 ```
 
-But, when I split the <TextInput> into Function Component for readable. The bug has come. Keyboard will dismiss when onChangeText is fired
+But, when I split the TextInput into Function Component for readable. The bug has come. Keyboard will dismiss when onChangeText is fired
 ```
 const RenderModal = ({visible}: ModalProps) => {
   const [text, setText] = useState<string>('');

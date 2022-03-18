@@ -6,7 +6,7 @@ import {
   TouchableOpacity,
   TextInput,
 } from 'react-native';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 const App = () => {
   const [isShowModal, setShowModal] = useState<boolean>(false);
@@ -43,13 +43,24 @@ const RenderModal = ({visible}: ModalProps) => {
     );
   };
 
+  const TextInputElement = (
+    <TextInput
+      value={text}
+      onChangeText={value => setText(value)}
+      placeholder="Enter here..."
+      placeholderTextColor={'#000'}
+      style={{backgroundColor: '#eceff1', height: 50}}
+    />
+  );
+
   //** If I compose TextInput like these codes bellow, Everythings work fine  */
 
   return (
     <Modal visible={visible} transparent={true} animationType="slide">
       <View style={styles.backdrop}>
         <View style={styles.modal}>
-          <RenderTextInput />
+          {TextInputElement}
+          {/* <RenderTextInput /> */}
           {/* <TextInput
             value={text}
             onChangeText={value => setText(value)}
